@@ -1,0 +1,9 @@
+.h-hover-link {
+  text-decoration: underline;
+  &:link {
+    text-decoration: underline;
+  }
+  &:hover {
+    text-decoration: none;
+  }
+}

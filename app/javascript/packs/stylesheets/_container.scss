@@ -1,0 +1,14 @@
+.container {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  &.is-md {
+    width: 48rem;
+  }
+  &.is-sm {
+    width: 36rem;
+  }
+  &.is-xs {
+    width: 30rem;
+  }
+}

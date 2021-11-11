@@ -1,0 +1,31 @@
+- remove('header')
+- remove('footer')
+
+.l-contents
+  .l-auth-form
+    .container.is-xs
+      .content
+        = link_to root_path do
+          img.a-form-logo.mb-5(src='https://bulma.io/images/bulma-logo.png')
+        h1.title.is-3.has-text-centered
+          | ログイン
+      form.box
+        .field
+          label.label
+            | Email
+          .control
+            input.input(placeholder=("e.g. alex@example.com") type="email")
+        .field
+          label.label
+            | パスワード
+          .control
+            input.input(placeholder="********" type="password")
+          p.is-size-7.mt-2.has-text-right
+            a.h-hover-link(href='')
+              | パスワードを忘れた
+        .field
+          button.button.is-primary.is-fullwidth
+            b
+              | ログイン
+      .content
+        | どんな小さな羽さえもそよがぬ 弱い息のお話をせがむとは！でもこの哀れな声一つ三つあわせた舌に逆らえましょうか？居丈だかなプリマがまずは唱えるその宣告は「おはじめなさい」すこし優しげに二番手の希望

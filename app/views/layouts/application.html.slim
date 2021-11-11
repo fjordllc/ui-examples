@@ -1,0 +1,21 @@
+doctype html
+html
+  head
+    title
+      | UiExamples
+    meta[name="viewport" content="width=device-width,initial-scale=1"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    .l-wrapper
+      .l-wrapper__start
+        - unless content_for?(:no_header)
+          header.l-wrapper__header
+            = render 'header'
+        .l-wrapper__body
+          = yield
+      - unless content_for?(:no_footer)
+        .l-wrapper__end
+          = render 'footer'

@@ -1,0 +1,19 @@
+.l-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.l-wrapper__start {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.l-wrapper__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}

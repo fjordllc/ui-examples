@@ -1,0 +1,15 @@
+.l-page-header__inner {
+  display: flex;
+  align-items: center;
+}
+
+.l-page-header__start {
+  flex: 1;
+}
+
+.l-page-header {
+  .hero-body {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}

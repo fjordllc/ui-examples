@@ -1,0 +1,92 @@
+.l-page
+  .l-page__start
+    .l-page-header
+      .hero.is-primary
+        .hero-body
+          .container
+            .l-page-header__inner
+              .l-page-header__start
+                h1.title.is-4
+                  | シンプルなフォーム
+              .l-page-header__end
+                .buttons
+                  = link_to page_path('form-with-preview.html'), class: 'button is-warning' do
+                    b
+                      | 新規作成
+  .l-page__end
+    .l-contents
+      nav.breadcrumb.has-succeeds-separator.is-small(aria-label="breadcrumbs")
+        .container
+          ul
+            li
+              = link_to root_path do
+                | Home
+            li
+              = link_to root_path do
+                | ああああ一覧
+            li.is-active
+              = link_to root_path, aria: {current: "page"} do
+                | ああああ新規作成
+      form
+        .container.is-md
+          .field
+            label.label
+              | 名前
+            .control
+              input.input placeholder=("Text input") type="text"
+          .field
+            label.label
+              | ユーザー名
+            .control.has-icons-left.has-icons-right
+              input.input.is-success placeholder=("Text input") type="text" value="bulma"
+              span.icon.is-small.is-left
+                i.fas.fa-user
+              span.icon.is-small.is-right
+                i.fas.fa-check
+            p.help.is-success This username is available
+          .field
+            label.label
+              | Email
+            .control.has-icons-left.has-icons-right
+              input.input.is-danger placeholder=("Email input") type="email" value="hello@"
+              span.icon.is-small.is-left
+                i.fas.fa-envelope
+              span.icon.is-small.is-right
+                i.fas.fa-exclamation-triangle
+            p.help.is-danger This email is invalid
+          .field
+            label.label
+              | セレクトタグ
+            .control
+              .select
+                select
+                  option Select dropdown
+                  option With options
+          .field
+            label.label
+              | メッセージ
+            .control
+              textarea.textarea placeholder="Textarea"
+          .field
+            .control
+              label.checkbox
+                input type="checkbox" /
+                a.h-hover-link href="#"
+                  | 規約
+                | に同意する
+          .field
+            .control
+              label.radio
+                input name="question" type="radio" /
+                | Yes
+              label.radio
+                input name="question" type="radio" /
+                | No
+          .field.is-grouped.is-align-items-flex-end
+            .control
+              button.button.is-link
+                b
+                  | 保存
+            .control
+              button.button.is-text.is-small
+                | キャンセル

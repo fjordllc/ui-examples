@@ -1,0 +1,34 @@
+nav.navbar(aria-label=('main navigation') role='navigation')
+  .navbar-brand
+    a.navbar-item(href='')
+      img(src='https://bulma.io/images/bulma-logo.png')
+    a.navbar-burger(aria-expanded='false' aria-label='menu' data-target='navbarBasicExample' role='button')
+      span(aria-hidden='true')
+      span(aria-hidden='true')
+      span(aria-hidden='true')
+  #navbarBasicExample.navbar-menu
+    .navbar-start
+      = link_to root_path, class: 'navbar-item' do
+        | Home
+      .navbar-item.has-dropdown.is-hoverable
+        a.navbar-link
+          | More
+        .navbar-dropdown
+          = link_to page_path('form-with-preview.html'), class: 'navbar-item' do
+            | プレビュー付きフォーム
+          = link_to page_path('simple-form'), class: 'navbar-item' do
+            | シンプルなフォーム
+          = link_to page_path('list-with-image'), class: 'navbar-item' do
+            | 画像付きリスト
+          a.navbar-item
+            | Contact
+          hr.navbar-divider/
+          a.navbar-item
+            | Report an issue
+    .navbar-end
+      .navbar-item
+        .buttons
+          = link_to page_path('signup'), class: 'button is-primary' do
+            b アカウント登録
+          = link_to page_path('login'), class: 'button is-light' do
+            | ログイン

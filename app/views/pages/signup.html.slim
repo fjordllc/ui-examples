@@ -1,0 +1,33 @@
+- remove('header')
+- remove('footer')
+
+.l-contents
+  .l-auth-form
+    .container.is-xs
+      .content
+        = link_to root_path do
+          img.a-form-logo.mb-5(src='https://bulma.io/images/bulma-logo.png')
+        h1.title.is-3.has-text-centered
+          | アカウント登録
+      form.box
+        .field
+          label.label
+            | Email
+          .control
+            input.input(placeholder=("e.g. alex@example.com") type="email")
+        .field
+          label.label
+            | パスワード
+          .control
+            input.input(placeholder="********" type="password")
+        .field
+          label.label
+            | パスワード確認
+          .control
+            input.input(placeholder="********" type="password")
+          p.is-size-7.mt-2
+            | 確認のためパスワードを再入力
+        .field
+          button.button.is-primary.is-medium.is-fullwidth
+            b
+              | アカウント登録
